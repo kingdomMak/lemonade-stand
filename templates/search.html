@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results - Tommy's Lemonade Stand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Include your standard navigation here -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/menu">MENU</a></li>
+            <li><a href="/order">ORDER</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-results">
+        <h1>Search Results for "{{ query }}"</h1>
+        
+        {% if drinks %}
+            <div class="results-grid">
+                {% for drink in drinks %}
+                <div class="drink-card">
+                    <img src="{{ url_for('static', filename='images/' + drink.image) }}" alt="{{ drink.name }}">
+                    <h2>{{ drink.name }}</h2>
+                    <p class="price">${{ drink.price }}</p>
+                    <p class="description">{{ drink.description }}</p>
+                    <a href="/order" class="order-button">Order Now</a>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="no-results">
+                <p>No drinks found matching your search. Try different keywords or browse our <a href="/menu">menu</a>.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <!-- Your existing footer content -->
+    </footer>
+</body>
+</html> 
