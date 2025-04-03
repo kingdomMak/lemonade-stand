@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu - Tshedza's Lemonade Stand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>🥤 Our Lemonade Menu</h1>
+    
+   
+
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="{{ url_for('static', filename='images/strawberry-lemonade.jpg') }}" alt="Strawberry Lemonade" class="menu-image">
+            <h2>🍓 Strawberry Lemonade</h2>
+            <p class="description">Fresh strawberries blended with our classic lemonade</p>
+            <p class="price">$4.99</p>
+            <a href="/order" class="order-button">Order Now</a>
+        </div>
+
+        <div class="menu-item">
+            <img src="{{ url_for('static', filename='images/drinks/classic-lemonade.jpg') }}" alt="Classic Lemonade" class="menu-image">
+            <h2>🍋 Classic Lemonade</h2>
+            <p class="description">Our signature fresh-squeezed lemonade with honey</p>
+            <p class="price">$3.99</p>
+            <a href="/order" class="order-button">Order Now</a>
+        </div>
+
+        <div class="menu-item">
+            <img src="{{ url_for('static', filename='images/blueberry-lemonade.jpg') }}" alt="Blueberry Lemonade" class="menu-image">
+            <h2>🫐 Blueberry Lemonade</h2>
+            <p class="description">Sweet blueberries mixed with our classic lemonade</p>
+            <p class="price">$4.99</p>
+            <a href="/order" class="order-button">Order Now</a>
+        </div>
+
+        <div class="add-ons">
+            <h2>Add-ons</h2>
+            <div class="add-on-item">
+                <span>🌿 Fresh Mint</span>
+                <span class="price">+$0.50</span>
+            </div>
+            <div class="add-on-item">
+                <span>🍯 Extra Honey</span>
+                <span class="price">+$0.50</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🍋 Tshedzas's Lemonade Stand</p>
+        <p>Made with love in 2024</p>
+        <nav class="footer-nav">
+            <a href="/about">About</a> |
+            <a href="/contact">Contact</a> |
+            <a href="/menu">Menu</a>
+        </nav>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order - Tshedza's Lemonade Stand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Place Your Order 🥤</h1>
+    
+
+    <div class="order-form">
+        <form action="/thankyou" method="GET">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="drink">Select Your Lemonade:</label>
+                <select id="drink" name="drink" required>
+                    <option value="">-- Choose your flavor --</option>
+                    <option value="Strawberry Lemonade">🍓 Strawberry Lemonade - $4.99</option>
+                    <option value="Classic Lemonade">🍋 Classic Lemonade - $3.99</option>
+                    <option value="Blueberry Lemonade">🫐 Blueberry Lemonade - $4.99</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="Regular">Regular (16 oz)</option>
+                    <option value="Large">Large (24 oz) +$1.00</option>
+                    <option value="Extra Large">Extra Large (32 oz) +$2.00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ice">Ice Level:</label>
+                <select id="ice" name="ice" required>
+                    <option value="Normal">Normal Ice</option>
+                    <option value="Less">Less Ice</option>
+                    <option value="No">No Ice</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Add-ons:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mint" name="addons" value="mint">
+                    <label for="mint">Fresh Mint (+$0.50) 🌿</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="honey" name="addons" value="honey">
+                    <label for="honey">Extra Honey (+$0.50) 🍯</label>
+                </div>
+            </div>
+
+            <button type="submit" class="order-button">Place Order</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>🍋 Tshedza's Lemonade Stand</p>
+        <p>Made with love in 2024</p>
+        <nav class="footer-nav">
+            <a href="/about">About</a> |
+            <a href="/contact">Contact</a> |
+            <a href="/menu">Menu</a>
+        </nav>
+    </footer>
+</body>
+</html> 
